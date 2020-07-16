@@ -2,7 +2,6 @@ package tools
 
 import (
 	"archive/zip"
-	"fmt"
 	"github.com/pkg/errors"
 	"io"
 	"os"
@@ -39,9 +38,6 @@ func Zip(srcDir string, zipFileName string) error {
 
 		// 获取：文件头信息
 		header, _ := zip.FileInfoHeader(info)
-		fmt.Println("###")
-		fmt.Println(path)
-		fmt.Println(srcDir + `/`)
 		header.Name = strings.TrimPrefix(path, srcDir+`/`)
 
 		// 判断：文件是不是文件夹
