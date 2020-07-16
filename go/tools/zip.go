@@ -20,8 +20,6 @@ func Zip(srcDir string, zipFileName string) error {
 	defer zipFile.Close()
 	if err != nil {
 		return errors.Wrapf(err, "创建目标压缩文件失败")
-	} else {
-
 	}
 
 	// 打开：zip文件
